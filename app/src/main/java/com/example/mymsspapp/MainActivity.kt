@@ -10,16 +10,24 @@ class MainActivity : AppCompatActivity() {
     private lateinit var textMessage: TextView
     private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
-            R.id.navigation_home -> {
-                textMessage.setText(R.string.title_home)
+            R.id.navigation_nico -> {
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.frameLayout, NiconicoFragment())
+                    .commit()
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_dashboard -> {
-                textMessage.setText(R.string.title_dashboard)
+//                textMessage.setText(R.string.title_dashboard)
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.frameLayout, YoutubeFragment())
+                    .commit()
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_notifications -> {
-                textMessage.setText(R.string.title_notifications)
+//                textMessage.setText(R.string.title_notifications)
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.frameLayout, FavoriteFragment())
+                    .commit()
                 return@OnNavigationItemSelectedListener true
             }
         }
@@ -31,7 +39,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
 
-        textMessage = findViewById(R.id.message)
+//        textMessage = findViewById(R.id.message)
         navView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
+
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.frameLayout, NiconicoFragment())
+            .commit()
     }
 }

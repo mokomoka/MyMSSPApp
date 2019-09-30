@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">My MSSP App</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_home">niconico</string>
+    <string name="title_dashboard">YouTube</string>
+    <string name="title_notifications">Favorite</string>
 </resources>
