@@ -18,15 +18,15 @@ class Interface {
         ) : Call<NicoResponse>
     }
 
-    interface TubeApiService {
-        @GET("v3/search")
-        fun getTubeData(
-            @Query("part") part : String,
-            @Query("channelId") channelId : String,
-            @Query("order") order : String,
-            @Query("q") query : String,
-            @Query("type") type : String,
-            @Query("key") key : String
-        ) : Call<TubeResponse>
-    }
+//    interface TubeApiService {
+//        @GET("v3/search")
+//        fun getTubeData(
+//            @Query("part") part : String,
+//            @Query("channelId") channelId : String,
+//            @Query("order") order : String,
+//            @Query("q") query : String,
+//            @Query("type") type : String,
+//            @Query("key") key : String
+//        ) : Call<TubeResponse>
+//    }
 }

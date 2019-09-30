@@ -3,4 +3,5 @@
     <string name="title_home">niconico</string>
     <string name="title_dashboard">YouTube</string>
     <string name="title_notifications">Favorite</string>
+    <string name="hello_blank_fragment">Blank Fragment</string>
 </resources>

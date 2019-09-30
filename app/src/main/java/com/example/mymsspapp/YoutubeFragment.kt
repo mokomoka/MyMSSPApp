@@ -48,38 +48,38 @@ class YoutubeFragment : Fragment() {
         return root
     }
 
-        private fun getTubeData(){
-        val baseApiUrl = "https://www.googleapis.com/youtube/"
-
-        val retrofit = Retrofit.Builder()
-            .baseUrl(baseApiUrl)
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-
-        val tubeService = retrofit.create<Interface.TubeApiService>(Interface.TubeApiService::class.java)
-        val tubeCall = tubeService.getTubeData(
-            part = "id,snippet",
-            channelId = "UCzciBmqDXPE47nOPRrjmo9A",
-            order = "viewCount",
-            query = "",
-            type = "video",
-            key = "AIzaSyC4ZnpMtHaUbH16pO4lL5kakLs3hF9SN7w"
-        )
-        tubeCall.enqueue(object : Callback<TubeResponse> {
-            override fun onResponse(NicoCall : Call<TubeResponse>, response : Response<TubeResponse>) {
-                if(response.isSuccessful) {
-                    val tubeResponse = response!!.body()!!
-                        Log.d("Tube retrofit", tubeResponse.items[0].toString())
-//                        getData.addAll(tubeResponse.data.shuffled().slice(0..9))
-                        recyclerView.adapter?.notifyDataSetChanged()
-                }
-            }
-
-            override fun onFailure(call: Call<TubeResponse>, t: Throwable) {
-                Log.d("Nico retrofit", t.message)
-            }
-        })
-    }
+//        private fun getTubeData(){
+//        val baseApiUrl = "https://www.googleapis.com/youtube/"
+//
+//        val retrofit = Retrofit.Builder()
+//            .baseUrl(baseApiUrl)
+//            .addConverterFactory(GsonConverterFactory.create())
+//            .build()
+//
+//        val tubeService = retrofit.create<Interface.TubeApiService>(Interface.TubeApiService::class.java)
+//        val tubeCall = tubeService.getTubeData(
+//            part = "id,snippet",
+//            channelId = "UCzciBmqDXPE47nOPRrjmo9A",
+//            order = "viewCount",
+//            query = "",
+//            type = "video",
+//            key = "AIzaSyC4ZnpMtHaUbH16pO4lL5kakLs3hF9SN7w"
+//        )
+//        tubeCall.enqueue(object : Callback<TubeResponse> {
+//            override fun onResponse(NicoCall : Call<TubeResponse>, response : Response<TubeResponse>) {
+//                if(response.isSuccessful) {
+//                    val tubeResponse = response!!.body()!!
+//                        Log.d("Tube retrofit", tubeResponse.items[0].toString())
+////                        getData.addAll(tubeResponse.data.shuffled().slice(0..9))
+//                        recyclerView.adapter?.notifyDataSetChanged()
+//                }
+//            }
+//
+//            override fun onFailure(call: Call<TubeResponse>, t: Throwable) {
+//                Log.d("Nico retrofit", t.message)
+//            }
+//        })
+//    }
 
 //    fun onClickRow(tappedView: View, nico: Nicos) {
 //        val url = "https://nico.ms/${nico.contentId}"
