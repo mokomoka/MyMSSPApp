@@ -1,4 +1,4 @@
-package com.example.mymsspapp
+package io.github.mokomoka.mssprandomapp
 
 import android.view.View
 import android.widget.ImageView

@@ -1,4 +1,4 @@
-package com.example.mymsspapp
+package io.github.mokomoka.mssprandomapp
 
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView

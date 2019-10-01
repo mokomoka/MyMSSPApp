@@ -1,4 +1,4 @@
-package com.example.mymsspapp
+package io.github.mokomoka.mssprandomapp
 
 import android.text.format.DateFormat
 import android.icu.text.SimpleDateFormat

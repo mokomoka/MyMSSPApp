@@ -1,4 +1,4 @@
-package com.example.mymsspapp
+package io.github.mokomoka.mssprandomapp
 
 import androidx.test.InstrumentationRegistry
 import androidx.test.runner.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getTargetContext()
-        assertEquals("com.example.mymsspapp", appContext.packageName)
+        assertEquals("io.github.mokomoka.mssprandomapp", appContext.packageName)
     }
 }

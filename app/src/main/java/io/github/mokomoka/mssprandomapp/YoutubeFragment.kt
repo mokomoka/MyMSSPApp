@@ -1,4 +1,4 @@
-package com.example.mymsspapp
+package io.github.mokomoka.mssprandomapp
 
 import android.content.Context
 import android.content.Intent
@@ -63,7 +63,7 @@ class YoutubeFragment : Fragment() {
 //            order = "viewCount",
 //            query = "",
 //            type = "video",
-//            key = "AIzaSyC4ZnpMtHaUbH16pO4lL5kakLs3hF9SN7w"
+//            key = ""
 //        )
 //        tubeCall.enqueue(object : Callback<TubeResponse> {
 //            override fun onResponse(NicoCall : Call<TubeResponse>, response : Response<TubeResponse>) {
